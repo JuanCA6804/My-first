@@ -1,20 +1,20 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header class="ion-padding ion-no-border">
+  <ion-button expand="block" (click)="counterUp()" [disabled]="numero===MAXIMO">
+    <ion-icon slot="start" name="arrow-up"></ion-icon>
+    Aumentar
+  </ion-button>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <!--one-way-binding (Interpolacion)-->
+  <div class="center-content big-font">
+    {{numero}}
   </div>
 </ion-content>
+
+<ion-footer>
+  <ion-button expand="block" (click)="counterDown()" [disabled]="numero===MINIMO">
+    <ion-icon slot="start" name="arrow-down"></ion-icon>
+    Disminuir
+  </ion-button>
+</ion-footer>
